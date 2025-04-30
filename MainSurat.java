@@ -12,6 +12,7 @@ public class MainSurat {
             System.out.println("2. Proses Surat Izin");
             System.out.println("3. Lihat Surat Izin Terakhir");
             System.out.println("4. Cari Surat berdasarkan Nama Mahasiswa");
+            System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilih = input.nextInt(); input.nextLine();
 
@@ -36,6 +37,11 @@ public class MainSurat {
                     Surat17 diproses = stack.pop();
                     if (diproses != null) {
                         System.out.println("Memproses surat dari: " + diproses.namaMahasiswa);
+                        System.out.println("ID Surat        : " + diproses.idSurat);
+                        System.out.println("Nama Mahasiswa  : " + diproses.namaMahasiswa);
+                        System.out.println("Kelas           : " + diproses.kelas);
+                        System.out.println("Jenis Izin      : " + (diproses.jenisIzin == 'S' ? "Sakit" : "Izin Lain"));
+                        System.out.println("Durasi Izin     : " + diproses.durasi + " hari");
                     }
                     break;
 
@@ -43,6 +49,11 @@ public class MainSurat {
                     Surat17 terakhir = stack.peek();
                     if (terakhir != null) {
                         System.out.println("Surat terakhir dari: " + terakhir.namaMahasiswa);
+                        System.out.println("ID Surat        : " + terakhir.idSurat);
+                        System.out.println("Nama Mahasiswa  : " + terakhir.namaMahasiswa);
+                        System.out.println("Kelas           : " + terakhir.kelas);
+                        System.out.println("Jenis Izin      : " + (terakhir.jenisIzin == 'S' ? "Sakit" : "Izin Lain"));
+                        System.out.println("Durasi Izin     : " + terakhir.durasi + " hari");
                     } else {
                         System.out.println("Tidak ada surat saat ini.");
                     }
@@ -57,7 +68,9 @@ public class MainSurat {
                         System.out.println("Tidak ditemukan surat atas nama " + cari);
                     }
                     break;
-
+                case 0:
+                System.out.println("Program selesai. Terima kasih!");
+                break;
                 default:
                     System.out.println("Pilihan tidak valid.");
             }

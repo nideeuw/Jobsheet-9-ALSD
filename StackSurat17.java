@@ -40,9 +40,15 @@ public class StackSurat17 {
         }
     }
 
+    // search menggunakan sequential search
     public boolean cariSurat(String namaMahasiswa) {
         for (int i = top; i >= 0; i--) {
             if (stack[i].namaMahasiswa.equalsIgnoreCase(namaMahasiswa)) {
+                System.out.println("ID Surat        : " + stack[i].idSurat);
+                System.out.println("Nama Mahasiswa  : " + stack[i].namaMahasiswa);
+                System.out.println("Kelas           : " + stack[i].kelas);
+                System.out.println("Jenis Izin      : " + (stack[i].jenisIzin == 'S' ? "Sakit" : "Izin Lain"));
+                System.out.println("Durasi Izin     : " + stack[i].durasi + " hari");
                 return true;
             }
         }
