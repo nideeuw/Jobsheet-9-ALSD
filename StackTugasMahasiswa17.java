@@ -43,10 +43,19 @@ public class StackTugasMahasiswa17 {
             return null;
         }
     }
-    public void print(){
-        for (int i = 0; i <= top; i++) {
+    // code sebelum diubah
+    // public void print(){
+    //     for (int i = 0; i <= top; i++) {
+    //         System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
+    //     }
+    //     System.out.println("");
+    // }
+    
+    // code setelah diubah supaya persis seperti soal
+    public void print() {
+        for (int i = top; i >= 0; i--) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
         }
-        System.out.println("");
+        System.out.println();
     }
 }
