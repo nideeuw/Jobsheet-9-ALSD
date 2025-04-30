@@ -58,4 +58,12 @@ public class StackTugasMahasiswa17 {
         }
         System.out.println();
     }
+    // melihat mahasiswa yang pertama kali mengumpulkan tugas melalui operasi lihat tugas terbawah
+    public Mahasiswa17 bottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            return null;
+        }
+    }
 }
